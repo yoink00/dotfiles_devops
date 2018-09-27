@@ -1,0 +1,7 @@
+- name: create ansible user
+  user: name=ansible uid=900
+- name: install cron job for ansible-pull
+  cron: user="ansible" name="ansible provision" minute="*/10" job="/usr/bin/ansible-pull -o -U https://github.com/yoink00/dotfiles_devops ansible/local.yml > /dev/null"
+- name: copy sudoers_ansible
+  copy: src=files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
+
