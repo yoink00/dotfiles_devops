@@ -9,5 +9,5 @@
 - name: Install antibody plugins
   become: yes
   become_user: stuart
-  shell: antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+  shell: antibody bundle < /home/stuart/.zsh_plugins.txt > /home/stuart/.zsh_plugins.sh
 
