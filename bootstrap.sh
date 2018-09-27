@@ -22,6 +22,7 @@ if [ ! -e ~/.ssh/config ]; then
 Host github.com
     IdentityFile ~/.ssh/id_rsa_github
 EOF
+    chmod 0600 ~/.ssh/config
 fi
 
 mkdir -p ~/Projects
