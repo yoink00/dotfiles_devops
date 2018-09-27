@@ -1,14 +1,6 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Set hostname
-    hostname:
-      name: megalon
-  - name: Install packages
-    dnf:
-      name:  "{{item}}"
-      state: latest
-    with_items:
-      - htop
-      - vim-enhanced
+    - include: tasks/hostname.yml
+    - include: tasks/packages.yml
 

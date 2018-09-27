@@ -1,0 +1,11 @@
+- name: Install packages
+  dnf:
+    name:  "{{item}}"
+    state: latest
+  with_items:
+    - htop
+    - vim-enhanced
+- name: Autoremove packages
+  dnf:
+    autoremove: yes
+
