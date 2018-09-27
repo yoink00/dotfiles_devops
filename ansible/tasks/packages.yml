@@ -6,6 +6,7 @@
     - htop
     - vim-enhanced
     - python2-libselinux
+    - zsh
 - name: Autoremove packages
   dnf:
     autoremove: yes
