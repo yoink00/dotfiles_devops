@@ -9,6 +9,7 @@
     - zsh
 - name: Install antibody
   shell: curl -sL git.io/antibody | sh -s
+  args:
     creates: /usr/local/bin/antibody
 - name: Autoremove packages
   dnf:
