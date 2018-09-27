@@ -6,7 +6,7 @@
       name: megalon
   - name: Install packages
     dnf:
-      name:  {{item}}
+      name:  "{{item}}"
       state: latest
     with_items:
       - htop
