@@ -4,8 +4,11 @@
   - name: Set hostname
     hostname:
       name: megalon
-  - name: Install htop
+  - name: Install packages
     dnf:
-      name:  htop
+      name:  {{item}}
       state: latest
+    with_items:
+      - htop
+      - vim-enhanced
 
