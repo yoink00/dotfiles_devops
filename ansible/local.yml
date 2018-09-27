@@ -1,6 +1,9 @@
 - hosts: localhost
   become: true
   tasks:
+  - name: Set hostname
+    hostname:
+      name: megalon
   - name: Install htop
     dnf:
       name:  htop
