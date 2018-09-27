@@ -1,0 +1,13 @@
+- name: Install antibody
+  shell: curl -sL git.io/antibody | sh -s warn=False
+  args:
+    creates: /usr/local/bin/antibody
+- name: Copy zsh_plugins
+  copy: src=files/zsh_plugins.txt dest=/home/stuart/.zsh_plugins.txt owner=stuart group=stuart mode=0600
+- name: Copy zshrc
+  copy: src=files/zshrc dest=/home/stuart/.zshrc owner=stuart group=stuart mode=0600
+- name: Install antibody plugins
+  become: yes
+  become_user: stuart
+  shell: antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+
