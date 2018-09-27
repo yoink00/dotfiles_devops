@@ -5,6 +5,7 @@
   with_items:
     - htop
     - vim-enhanced
+    - python2-libselinux
 - name: Autoremove packages
   dnf:
     autoremove: yes
