@@ -4,8 +4,8 @@
 # Minimal configuration required to bootstrap a new machine
 ###
 
-sudo dnf install git
-sudo dnf install ansible
+sudo dnf install -y git
+sudo dnf install -y ansible
 
 if [ ! -e ~/.ssh/id_rsa_github ]; then
     echo "No github SSH key found"
