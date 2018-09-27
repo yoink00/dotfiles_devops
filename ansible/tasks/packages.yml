@@ -1,4 +1,4 @@
-- name: Install packages
+- name: Install packages from repository
   dnf:
     name:  "{{item}}"
     state: latest
@@ -7,6 +7,9 @@
     - vim-enhanced
     - python2-libselinux
     - zsh
+- name: Install antibody
+  shell: curl -sL git.io/antibody | sh -s
+    creates: /usr/local/bin/antibody
 - name: Autoremove packages
   dnf:
     autoremove: yes
