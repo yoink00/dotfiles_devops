@@ -8,7 +8,7 @@
     - python2-libselinux
     - zsh
 - name: Install antibody
-  shell: curl -sL git.io/antibody | sh -s
+  shell: curl -sL git.io/antibody | sh -s warn=False
   args:
     creates: /usr/local/bin/antibody
 - name: Autoremove packages
