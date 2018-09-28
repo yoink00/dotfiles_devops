@@ -6,8 +6,4 @@
   copy: src=files/zsh_plugins.txt dest=/home/stuart/.zsh_plugins.txt owner=stuart group=stuart mode=0600
 - name: Copy zshrc
   copy: src=files/zshrc dest=/home/stuart/.zshrc owner=stuart group=stuart mode=0600
-- name: Install antibody plugins
-  become: yes
-  become_user: stuart
-  shell: antibody bundle < /home/stuart/.zsh_plugins.txt > /home/stuart/.zsh_plugins.sh
 

@@ -1,3 +1,5 @@
 # Installed from Ansible
-source ~/.zsh_plugins.sh
+source <(antibody init)
+
+antibody bundle < ~/.zsh_plugins.txt
 
