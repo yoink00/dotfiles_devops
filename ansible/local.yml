@@ -19,4 +19,5 @@
           visual_studio_code_extensions:
             - ms-vscode.go
             - kelvin.vscode-sshfs
+            - vscoss.vscode-ansible
 
