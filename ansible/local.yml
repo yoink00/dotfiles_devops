@@ -4,11 +4,12 @@
     - include: tasks/hostname.yml
     - include: tasks/packages.yml
     - include: tasks/auto-ansible.yml
-    - name: Add zsh to stuart user
+    - name: Add fish to stuart user
       user:
         name: stuart
-        shell: /bin/zsh
+        shell: /bin/fish
         password: $6$zxB5xUurvxljVcFv$ar2HDfGnGhozDVz/eHSsS5KjqUhViI3xVs6kyfuPUaPTQp.YWZ9Cg3ERLSm3b2w0mLu8cglEaqJNpDjxY1vqK1
         home: /home/stuart
-    - include: tasks/zsh.yml
+    - name: Install fish_prompt
+      copy: src=files/fish_prompt.fish dest=/home/stuart/.config/fish/functions/fish_prompt.fish owner=stuart group=stuart mode=0440
 

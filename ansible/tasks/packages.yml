@@ -6,6 +6,12 @@
     - htop
     - vim-enhanced
     - python2-libselinux
+    - fish
+- name: Remove unwanted packages
+  dnf:
+    name: "{{item}}"
+    state: absent
+  with_items:
     - zsh
 - name: Autoremove packages
   dnf:
