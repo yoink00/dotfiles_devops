@@ -36,7 +36,8 @@ function fish_prompt --description 'Write out the prompt'
         set git_info "(git$git_status$git_branch"(set_color white)")"
     end
     set_color -b black
-    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s' (set_color -o white) '❰' (set_color green) $USER (set_color white) '❙' (set_color yellow) (echo $PWD | sed -e "s|^$HOME|~|") (set_color white) $git_info (set_color white) '❱' (set_color white)
+    set dir (echo $PWD | perl -pl0 -e "s|^$HOME|~|;s|([^/])[^/]*/|\$""1/|g")
+    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s' (set_color -o white) '❰' (set_color green) $USER (set_color white) '❙' (set_color yellow) $dir (set_color white) $git_info (set_color white) '❱' (set_color white)
     if test $laststatus -eq 0
         printf "\n%s✔%s\$%s " (set_color -o green) (set_color white) (set_color normal)
     else
