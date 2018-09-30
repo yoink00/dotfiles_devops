@@ -11,5 +11,5 @@
         password: $6$zxB5xUurvxljVcFv$ar2HDfGnGhozDVz/eHSsS5KjqUhViI3xVs6kyfuPUaPTQp.YWZ9Cg3ERLSm3b2w0mLu8cglEaqJNpDjxY1vqK1
         home: /home/stuart
     - name: Install fish_prompt
-      copy: src=files/fish_prompt.fish dest=/home/stuart/.config/fish/functions/fish_prompt.fish owner=stuart group=stuart mode=0440
+      copy: src=files/fish_prompt.fish dest=/home/stuart/.config/fish/functions/fish_prompt.fish owner=stuart group=stuart mode=0700
 
