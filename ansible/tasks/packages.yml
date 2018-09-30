@@ -7,6 +7,7 @@
     - vim-enhanced
     - python2-libselinux
     - fish
+    - golang-bin
 - name: Remove unwanted packages
   dnf:
     name: "{{item}}"
