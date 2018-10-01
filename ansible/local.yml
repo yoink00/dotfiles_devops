@@ -4,6 +4,7 @@
     - include: tasks/hostname.yml
     - include: tasks/packages.yml
     - include: tasks/auto-ansible.yml
+    - include: tasks/go.yml
     - name: Add fish to stuart user
       user:
         name: stuart
@@ -21,4 +22,6 @@
             - kelvin.vscode-sshfs
             - vscoss.vscode-ansible
             - lunaryorn.fish-ide
-
+          visual_studio_code_settings: {
+            "go.gopath": "/home/stuart/Projects/GOWS"
+          }

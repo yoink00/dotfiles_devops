@@ -1,0 +1,2 @@
+- name: Create Go workspace
+  file: path=/home/stuart/Projects/GOWS state=directory group=stuart owner=stuart mode=0750
