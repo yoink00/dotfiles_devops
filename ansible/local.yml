@@ -17,11 +17,3 @@
     - role: gantsign.visual-studio-code
       users:
         - username: stuart
-          visual_studio_code_extensions:
-            - ms-vscode.go
-            - kelvin.vscode-sshfs
-            - vscoss.vscode-ansible
-            - lunaryorn.fish-ide
-          visual_studio_code_settings: {
-            "go.gopath": "/home/stuart/Projects/GOWS"
-          }
