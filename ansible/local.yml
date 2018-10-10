@@ -13,6 +13,7 @@
         home: /home/stuart
     - name: Install fish_prompt
       copy: src=files/fish_prompt.fish dest=/home/stuart/.config/fish/functions/fish_prompt.fish owner=stuart group=stuart mode=0700
+    - include: tasks/gnome.yml
   roles:
     - role: gantsign.visual-studio-code
       users:
