@@ -8,4 +8,13 @@
     user: stuart
     key: org.gnome.desktop.wm.keybindings.switch-to-workspace-up
     value: "['<Super>Page_Up', '<Control><Alt>Up', '<Super>bracketleft']"
-
+- name: Move window to workspace 'up' keybinding
+  gsetting:
+    user: stuart
+    key: org.gnome.desktop.wm.keybindings.move-to-workspace-up
+    value: "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Up', '<Super><Shift>bracketleft']"
+- name: Move window to workspace 'down' keybinding
+  gsetting:
+    user: stuart
+    key: org.gnome.desktop.wm.keybindings.move-to-workspace-down
+    value: "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Down', '<Super><Shift>bracketright']"
