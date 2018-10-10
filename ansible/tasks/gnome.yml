@@ -3,4 +3,9 @@
     user: stuart
     key: org.gnome.desktop.wm.keybindings.switch-to-workspace-down
     value: "['<Super>Page_Down', '<Control><Alt>Down', '<Super>bracketright']"
+- name: Set workspace switch 'up' keybinding
+  gsetting:
+    user: stuart
+    key: org.gnome.desktop.wm.keybindings.switch-to-workspace-up
+    value: "['<Super>Page_Up', '<Control><Alt>Up', '<Super>bracketleft']"
 
