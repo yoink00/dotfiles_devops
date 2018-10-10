@@ -8,6 +8,8 @@
     - python2-libselinux
     - fish
     - golang-bin
+    - krita
+    - https://downloads.vivaldi.com/stable/vivaldi-stable-2.0.1309.37-2.x86_64.rpm
 - name: Remove unwanted packages
   dnf:
     name: "{{item}}"
