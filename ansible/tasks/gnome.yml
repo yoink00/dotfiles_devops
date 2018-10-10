@@ -1,3 +1,6 @@
 - name: Set workspace switch 'down' keybinding
-  become_user: stuart
-  command: "gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down ''[\''<Super>Page_Down\'', \''<Control><Alt>Down\'', \''<Super>bracketright\'']''"
+  gsetting:
+    user: stuart
+    key: org.gnome.desktop.wm.keybindings.switch-to-workspace-down
+    value: "['<Super>Page_Down', '<Control><Alt>Down', '<Super>bracketright']"
+

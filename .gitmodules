@@ -1,3 +1,6 @@
 [submodule "ansible/roles/gantsign.visual-studio-code"]
 	path = ansible/roles/gantsign.visual-studio-code
 	url = https://github.com/gantsign/ansible-role-visual-studio-code.git
+[submodule "ansible/library/ansible-gsetting"]
+	path = ansible/library/ansible-gsetting
+	url = https://github.com/jistr/ansible-gsetting.git
