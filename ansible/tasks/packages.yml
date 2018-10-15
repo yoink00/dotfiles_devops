@@ -19,4 +19,6 @@
 - name: Autoremove packages
   dnf:
     autoremove: yes
+- name: copy VS Code settings file
+  copy: src=files/settings.json dest=/home/stuart/.config/Code/User/settings.json owner=stuart group=stuart mode=0640
 

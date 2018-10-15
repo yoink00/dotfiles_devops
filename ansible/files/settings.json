@@ -1,0 +1,7 @@
+{
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "go.inferGopath": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500
+}
