@@ -26,6 +26,7 @@
     - https://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/releases/{{fedora_version.stdout}}/Everything/x86_64/os/russianfedora-free-release-{{fedora_version.stdout}}-1.noarch.rpm
     - https://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/{{fedora_version.stdout}}/Everything/x86_64/os/russianfedora-nonfree-release-{{fedora_version.stdout}}-1.noarch.rpm
     - chromium-pepper-flash
+    - ffmpeg
 - name: Remove unwanted packages
   dnf:
     name: "{{item}}"
@@ -37,4 +38,7 @@
     autoremove: yes
 - name: copy VS Code settings file
   copy: src=files/settings.json dest=/home/stuart/.config/Code/User/settings.json owner=stuart group=stuart mode=0640
+- name: Install Vivaldi FFMPEG stuff
+  become_user: stuart
+  command: curl -Lr1078- vvld.in/lm64 | tar xJ -C ~ --wildcards \*libffmpeg\.so --xform 's,.*/,.local/lib/vivaldi/,'
 
