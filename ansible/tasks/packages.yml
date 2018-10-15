@@ -1,3 +1,6 @@
+- name: Fedora version
+  command: rpm -E '%fedora'
+  register: fedora_version
 - name: Install packages from repository
   dnf:
     name:  "{{item}}"
