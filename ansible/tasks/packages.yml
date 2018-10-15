@@ -23,6 +23,7 @@
     - gstreamer1-plugins-bad-free
     - gstreamer1-plugins-bad-nonfree
     - gstreamer-ffmpeg
+    - https://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/releases/{{fedora_version.stdout}}/Everything/x86_64/os/russianfedora-free-release-{{fedora_version.stdout}}-1.noarch.rpm
     - https://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/{{fedora_version.stdout}}/Everything/x86_64/os/russianfedora-nonfree-release-{{fedora_version.stdout}}-1.noarch.rpm
     - chromium-pepper-flash
 - name: Remove unwanted packages
