@@ -22,6 +22,7 @@
     - gstreamer1-plugins-ugly-free
     - gstreamer1-plugins-bad-free
     - gstreamer1-plugins-bad-nonfree
+    - gstreamer-ffmpeg
 - name: Remove unwanted packages
   dnf:
     name: "{{item}}"
