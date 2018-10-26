@@ -27,6 +27,9 @@
     - https://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/{{fedora_version.stdout}}/Everything/x86_64/os/russianfedora-nonfree-release-{{fedora_version.stdout}}-1.noarch.rpm
     - chromium-pepper-flash
     - ffmpeg
+    - graphviz
+    - nmap
+    - rofi
 - name: Remove unwanted packages
   dnf:
     name: "{{item}}"
