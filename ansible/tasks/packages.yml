@@ -43,7 +43,7 @@
   copy: src=files/settings.json dest=/home/stuart/.config/Code/User/settings.json owner=stuart group=stuart mode=0640
 - name: Install Vivaldi FFMPEG stuff
   become_user: stuart
-  shell: "curl -Lr1078- vvld.in/lm64 | tar xJ -C ~ --wildcards \\*libffmpeg\\.so --xform 's,.*/,.local/lib/vivaldi/,'"
+  shell: "curl -L vvld.in/lm64|tail -c+1079|tar xJ -C ~ --wildcards \\*libffmpeg\\.so --xform 's,.*/,.local/lib/vivaldi/,'"
 
 
 
